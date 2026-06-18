@@ -8,7 +8,35 @@ body {
     font-family: "DM Sans", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    min-height: 300vh;
+    padding-bottom: 30px;
+}
+
+/* Alert */
+.alert-parent {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    width: 500px;
+    background-color: rgb(210, 25, 25);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-radius: 15px;
+    font-size: 19px;
+    transform: translateX(-50%) translateY(-120px);
+    opacity: 0;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.alert-parent.active {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
+
+.alert-cross {
+    cursor: pointer;
 }
 
 /* ── Desktop header ── */
@@ -518,11 +546,15 @@ input[type="number"]::-webkit-inner-spin-button {
     gap: 20px;
 }
 
+
 .overall-result-child {
     margin-top: 25px;
     padding: 20px;
     width: 400px;
-    height: auto;
+    height: 320px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
     border: 1px solid #e5e5e5;
     border-radius: 20px;
     gap: 10px;
@@ -576,7 +608,7 @@ input[type="number"]::-webkit-inner-spin-button {
     margin-top: 25px;
     padding: 20px;
     width: 400px;
-    height: 300px;
+    height: 320px;
     border: 1px solid #e5e5e5;
     border-radius: 20px;
     gap: 10px;
@@ -632,7 +664,8 @@ input[type="number"]::-webkit-inner-spin-button {
     background: #2E27A6;
     border-radius: 6px;
     height: 100%;
-    width: 75%;
+    width: 0%;
+    transition: width 1s ease;
 }
 
 .next-bd-fill-text {
@@ -901,5 +934,42 @@ input[type="number"]::-webkit-inner-spin-button {
 
     .view-all {
         font-size: 12px;
+    }
+}
+
+@media (min-width: 901px) and (max-width: 1350px) {
+    .calculation-child {
+        flex-flow: column nowrap;
+        align-items: stretch;
+        gap: 20px;
+    }
+
+    .overall-result-parent {
+        justify-content: space-between;
+        gap: 0px;
+    }
+
+    .overall-result-child {
+        width: 430px;
+    }
+
+    .next-birthday-child {
+        width: 430px;
+    }
+
+    .cal-left {
+        width: 100%;
+    }
+
+    .cal-right {
+        width: 100%;
+    }
+
+    .results-child {
+        flex-flow: row nowrap;
+    }
+
+    .result {
+        flex: 1;
     }
 }
