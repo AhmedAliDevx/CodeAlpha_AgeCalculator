@@ -1,0 +1,245 @@
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 10px;
+    background: transparent;
+    cursor: pointer;
+    color: #333;
+    transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+    flex-shrink: 0;
+}
+
+.theme-toggle svg {
+    width: 20px;
+    height: 20px;
+}
+
+.theme-toggle:hover {
+    background-color: #E9EAF8;
+    border-color: #D4D4EE;
+    color: #1D1088;
+}
+
+/* Sun hidden in light mode */
+.theme-toggle .sun-icon {
+    display: none;
+}
+
+/* Smooth transitions on key elements */
+body,
+.calculator-card,
+.result,
+.overall-result-child,
+.next-birthday-child,
+.form-control,
+.reference-date-input,
+.dates,
+.bottom-nav,
+.header-parent {
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark {
+    background-color: #0a0d1a;
+    color: #e0e0f0;
+}
+
+/* Header */
+body.dark .header-parent {
+    background-color: #0a0d1a;
+}
+
+body.dark .header-child {
+    border-bottom-color: #1e2235;
+}
+
+body.dark .header-title {
+    color: #fff;
+}
+
+body.dark .logo-svg svg rect,
+body.dark .logo-svg svg line {
+    stroke: #fff;
+}
+
+/* Toggle button in dark mode */
+body.dark .theme-toggle {
+    border-color: #2a2d45;
+    color: #ccc;
+}
+
+body.dark .theme-toggle:hover {
+    background-color: #1e2235;
+    border-color: #3a3d60;
+    color: #a0a8ff;
+}
+
+body.dark .theme-toggle .moon-icon {
+    display: none;
+}
+
+body.dark .theme-toggle .sun-icon {
+    display: block;
+}
+
+/* Nav buttons */
+body.dark .header-button {
+    color: #b0b0cc;
+}
+
+body.dark .header-button:hover,
+body.dark .header-button.active {
+    background-color: #1e2235;
+    border-color: #3a3d60;
+    color: #a0a8ff;
+}
+
+/* Hero */
+body.dark .hero-title {
+    color: #fff;
+}
+
+body.dark .hero-span {
+    color: #7B6EF6;
+}
+
+body.dark .hero-content {
+    color: #8888aa;
+}
+
+/* Calculator card */
+body.dark .calculator-card {
+    background-color: #141824;
+    border-color: #1e2235;
+}
+
+body.dark .calculator-card-title {
+    color: #e0e0f0;
+}
+
+body.dark label {
+    color: #b0b0cc;
+}
+
+/* Inputs */
+body.dark .form-control {
+    background-color: #0f1220;
+    border-color: #2a2d45;
+    color: #e0e0f0;
+}
+
+body.dark .form-control::placeholder {
+    color: #3a3a55;
+}
+
+body.dark .form-control:focus {
+    border-color: #6B5CE7;
+}
+
+/* Reference date */
+body.dark .reference-date-input {
+    background: #0f1220;
+    border-color: #2a2d45;
+}
+
+body.dark .reference-date-label {
+    color: #b0b0cc;
+}
+
+body.dark .reference-date-value {
+    color: #ccc;
+}
+
+body.dark .reference-date-input svg line,
+body.dark .reference-date-input svg circle {
+    stroke: #666688;
+}
+
+/* Common dates */
+body.dark .common-dates-title {
+    color: #b0b0cc;
+    border-top-color: #1e2235;
+}
+
+body.dark .dates {
+    background-color: #0f1220;
+    color: #b0b0cc;
+}
+
+body.dark .dates:hover {
+    background-color: #3936c0;
+    color: #fff;
+}
+
+body.dark .result.d {
+    background-color: #1a1e2e;
+    border-color: #1e2235;
+    color: #e0e0f0;
+}
+
+body.dark .overall-result-child {
+    background-color: #141824;
+    border-color: #1e2235;
+}
+
+body.dark .total-time-title {
+    color: #e0e0f0;
+}
+
+body.dark .total-time-content {
+    border-bottom-color: #1e2235;
+}
+
+body.dark .total-value {
+    color: #e0e0f0;
+}
+
+body.dark .total-weeks-title,
+body.dark .total-days-title,
+body.dark .total-hours-title {
+    color: #8888aa;
+}
+
+/* Next birthday panel */
+body.dark .next-birthday-child {
+    background-color: #141824;
+    border-color: #1e2235;
+}
+
+body.dark .next-bd-title {
+    color: #e0e0f0;
+}
+
+body.dark .next-bd-fill {
+    background: #1e2235;
+}
+
+body.dark .next-bd-fill-text {
+    color: #b0b0cc;
+}
+
+body.dark .days {
+    color: #7B6EF6;
+}
+
+body.dark .days-title {
+    color: #7B6EF6;
+}
+
+/* Mobile bottom nav */
+body.dark .bottom-nav {
+    background: #141824;
+    border-top-color: #1e2235;
+}
+
+body.dark .bottom-nav-btn {
+    color: #555577;
+}
+
+body.dark .bottom-nav-btn.active {
+    color: #a0a8ff;
+}

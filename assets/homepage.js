@@ -1,11 +1,3 @@
-/* Navbar Js */
-const btns = document.querySelectorAll(".bottom-nav-btn");
-btns.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    btns.forEach((b) => b.classList.remove("active"));
-    btn.classList.add("active");
-  });
-});
 /* Calculator Js */
 const today = new Date();
 const formatted = today.toLocaleDateString("en-US", {
@@ -103,7 +95,7 @@ calculateBtn.addEventListener("click", (e) => {
   TotalDays.textContent = TotalD;
   TotalHours.textContent = TotalH;
 
-  // Next Birthday
+  /* Next Birthday */
   let nextBd = new Date(
     today.getFullYear(),
     birthDate.getMonth(),
@@ -144,7 +136,7 @@ calculateBtn.addEventListener("click", (e) => {
 const commonDates = document.querySelectorAll(".dates");
 commonDates.forEach((btn) => {
   btn.addEventListener("click", (e) => {
-    e.preventDefault(); // stop the anchor tag from jumping
+    e.preventDefault();
     const value = btn.textContent.trim();
     if (value === "Today") {
       yearInput.value = today.getFullYear();

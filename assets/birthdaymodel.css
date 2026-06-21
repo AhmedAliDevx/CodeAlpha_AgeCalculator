@@ -1,0 +1,153 @@
+.bd-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    padding: 20px;
+}
+
+.bd-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.bd-card {
+    background: #fff;
+    border-radius: 16px;
+    border: 1px solid #e5e5e5;
+    max-width: 360px;
+    width: 100%;
+    padding: 32px 28px 28px;
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.bd-close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    border: none;
+    background: transparent;
+    color: #888;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.15s, color 0.15s;
+}
+
+.bd-close:hover {
+    background-color: #f0f0f5;
+    color: #333;
+}
+
+.bd-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background-color: #E9EAF8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+.bd-icon svg {
+    width: 26px;
+    height: 26px;
+}
+
+.bd-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1a1f8b;
+    font-family: "DM Sans", sans-serif;
+    margin: 0;
+}
+
+.bd-age {
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+    font-family: "DM Sans", sans-serif;
+    margin: 0;
+}
+
+.bd-message {
+    font-size: 14px;
+    color: #777;
+    line-height: 1.6;
+    font-family: "DM Sans", sans-serif;
+    margin: 4px 0 12px;
+}
+
+.bd-btn {
+    width: 100%;
+    padding: 11px 20px;
+    background-color: #2d2baa;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: "DM Sans", sans-serif;
+    transition: background-color 0.2s;
+}
+
+.bd-btn:hover {
+    background-color: #1a1f8b;
+}
+
+/* Dark mode */
+body.dark .bd-card {
+    background-color: #141824;
+    border-color: #1e2235;
+}
+
+body.dark .bd-icon {
+    background-color: #1e2235;
+}
+
+body.dark .bd-icon svg path,
+body.dark .bd-icon svg circle {
+    stroke: #a0a8ff;
+}
+
+body.dark .bd-icon svg circle {
+    fill: #a0a8ff;
+}
+
+body.dark .bd-title {
+    color: #c0c8ff;
+}
+
+body.dark .bd-age {
+    color: #b0b0cc;
+}
+
+body.dark .bd-message {
+    color: #8888aa;
+}
+
+body.dark .bd-close {
+    color: #888;
+}
+
+body.dark .bd-close:hover {
+    background-color: #1e2235;
+    color: #ccc;
+}

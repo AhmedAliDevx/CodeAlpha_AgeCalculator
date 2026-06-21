@@ -9,7 +9,10 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="assets/header.css">
     <link rel="stylesheet" href="assets/homepage.css" />
+    <link rel="stylesheet" href="assets/birthdaymodel.css" />
+    <link rel="stylesheet" href="assets/darktheme.css" />
     <title>Age Calculator</title>
   </head>
   <body>
@@ -64,266 +67,31 @@
             <div class="header-title">Age Calculator</div>
           </div>
 
-          <!-- Desktop nav -->
-          <div class="second-child">
-            <a href="" class="header-button">
-              <div class="header-btn-svg">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <rect x="3" y="3" width="18" height="18" rx="4" fill="#000" />
-                  <rect
-                    x="6.5"
-                    y="6.5"
-                    width="4.5"
-                    height="3"
-                    rx="1"
-                    fill="white"
-                    opacity="0.9"
-                  />
-                  <rect
-                    x="13"
-                    y="6.5"
-                    width="4.5"
-                    height="3"
-                    rx="1"
-                    fill="white"
-                    opacity="0.35"
-                  />
-                  <rect
-                    x="6.5"
-                    y="11"
-                    width="2.5"
-                    height="2.5"
-                    rx="0.6"
-                    fill="white"
-                    opacity="0.7"
-                  />
-                  <rect
-                    x="10.75"
-                    y="11"
-                    width="2.5"
-                    height="2.5"
-                    rx="0.6"
-                    fill="white"
-                    opacity="0.7"
-                  />
-                  <rect
-                    x="15"
-                    y="11"
-                    width="2.5"
-                    height="2.5"
-                    rx="0.6"
-                    fill="white"
-                    opacity="0.7"
-                  />
-                  <rect
-                    x="6.5"
-                    y="15"
-                    width="2.5"
-                    height="2.5"
-                    rx="0.6"
-                    fill="white"
-                    opacity="0.7"
-                  />
-                  <rect
-                    x="10.75"
-                    y="15"
-                    width="2.5"
-                    height="2.5"
-                    rx="0.6"
-                    fill="white"
-                    opacity="0.7"
-                  />
-                  <rect
-                    x="15"
-                    y="14"
-                    width="2.5"
-                    height="3.5"
-                    rx="0.6"
-                    fill="white"
-                    opacity="0.9"
-                  />
-                </svg>
-              </div>
-              Calculator
-            </a>
-            <a href="" class="header-button">
-              <div class="header-btn-svg">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <circle
-                    cx="12"
-                    cy="12"
-                    r="9"
-                    stroke="#000"
-                    stroke-width="1.6"
-                  />
-                  <path
-                    d="M12 7.5V12.5L15.5 14.5"
-                    stroke="#000"
-                    stroke-width="1.6"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </div>
-              History
-            </a>
-            <a href="" class="header-button">
-              <div class="header-btn-svg">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0 0-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0 0-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0 0-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066-2.573c-.94-1.543.826-3.31 2.37-2.37a1.724 1.724 0 0 0 2.572-1.065z"
-                    stroke="#000"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <circle
-                    cx="12"
-                    cy="12"
-                    r="3"
-                    stroke="#000"
-                    stroke-width="1.5"
-                  />
-                </svg>
-              </div>
-              Settings
-            </a>
-          </div>
+           <!-- Desktop nav -->
+            <div class="second-child">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
+                              stroke="currentColor" stroke-width="2"
+                              stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
+                        <line x1="12" y1="1"  x2="12" y2="3"  stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="12" y1="21" x2="12" y2="23" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="4.22" y1="4.22"   x2="5.64"  y2="5.64"  stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="1"  y1="12" x2="3"  y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="21" y1="12" x2="23" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="4.22"  y1="19.78" x2="5.64"  y2="18.36" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="18.36" y1="5.64"  x2="19.78" y2="4.22"  stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
         </div>
       </div>
     </header>
-
-    <!-- Mobile bottom tab bar -->
-    <nav class="bottom-nav">
-      <a href="" class="bottom-nav-btn active" data-tab="calculator">
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="3" y="3" width="18" height="18" rx="4" fill="currentColor" />
-          <rect
-            x="6.5"
-            y="6.5"
-            width="4.5"
-            height="3"
-            rx="1"
-            fill="white"
-            opacity="0.9"
-          />
-          <rect
-            x="13"
-            y="6.5"
-            width="4.5"
-            height="3"
-            rx="1"
-            fill="white"
-            opacity="0.35"
-          />
-          <rect
-            x="6.5"
-            y="11"
-            width="2.5"
-            height="2.5"
-            rx="0.6"
-            fill="white"
-            opacity="0.7"
-          />
-          <rect
-            x="10.75"
-            y="11"
-            width="2.5"
-            height="2.5"
-            rx="0.6"
-            fill="white"
-            opacity="0.7"
-          />
-          <rect
-            x="15"
-            y="11"
-            width="2.5"
-            height="2.5"
-            rx="0.6"
-            fill="white"
-            opacity="0.7"
-          />
-          <rect
-            x="6.5"
-            y="15"
-            width="2.5"
-            height="2.5"
-            rx="0.6"
-            fill="white"
-            opacity="0.7"
-          />
-          <rect
-            x="10.75"
-            y="15"
-            width="2.5"
-            height="2.5"
-            rx="0.6"
-            fill="white"
-            opacity="0.7"
-          />
-          <rect
-            x="15"
-            y="14"
-            width="2.5"
-            height="3.5"
-            rx="0.6"
-            fill="white"
-            opacity="0.9"
-          />
-        </svg>
-        Calculator
-      </a>
-      <a href="" class="bottom-nav-btn" data-tab="history">
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle
-            cx="12"
-            cy="12"
-            r="9"
-            stroke="currentColor"
-            stroke-width="1.6"
-          />
-          <path
-            d="M12 7.5V12.5L15.5 14.5"
-            stroke="currentColor"
-            stroke-width="1.6"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-        History
-      </a>
-      <a href="" class="bottom-nav-btn" data-tab="settings">
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0 0-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0 0-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0 0-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066-2.573c-.94-1.543.826-3.31 2.37-2.37a1.724 1.724 0 0 0 2.572-1.065z"
-            stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-          <circle
-            cx="12"
-            cy="12"
-            r="3"
-            stroke="currentColor"
-            stroke-width="1.5"
-          />
-        </svg>
-        Settings
-      </a>
-    </nav>
+    <!-- Alert Modal -->
     <div class="alert-parent">
   <span class="alert-content"></span>
   <div class="alert-cross">
@@ -332,7 +100,37 @@
       <line x1="20" y1="4" x2="4" y2="20"/>
     </svg>
   </div>
-</div>
+    </div>
+
+    <!-- Birthday Modal -->
+    <div class="bd-overlay" id="bdModal">
+        <div class="bd-card">
+            <button class="bd-close" id="bdClose" aria-label="Close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                    <line x1="4" y1="4" x2="20" y2="20"/>
+                    <line x1="20" y1="4" x2="4" y2="20"/>
+                </svg>
+            </button>
+
+            <div class="bd-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="4" y="11" width="16" height="9" rx="1.5" stroke="#2d2baa" stroke-width="1.5"/>
+                    <path d="M4 14h16" stroke="#2d2baa" stroke-width="1.5"/>
+                    <path d="M12 11V7" stroke="#2d2baa" stroke-width="1.5" stroke-linecap="round"/>
+                    <circle cx="12" cy="5" r="1.5" fill="#2d2baa"/>
+                    <path d="M8 11c0-1.5 1-2 1-3.5S8 5 8 5" stroke="#2d2baa" stroke-width="1.2" stroke-linecap="round"/>
+                    <path d="M16 11c0-1.5 1-2 1-3.5S16 5 16 5" stroke="#2d2baa" stroke-width="1.2" stroke-linecap="round"/>
+                </svg>
+            </div>
+
+            <h2 class="bd-title">Happy Birthday!</h2>
+            <p class="bd-age" id="bdAge"></p>
+            <p class="bd-message">Congratulations, today is your birthday. We hope you have a great day.</p>
+
+            <button class="bd-btn" id="bdBtn">Thank you</button>
+        </div>
+    </div>
     <main>
         <div class="hero-parent ">
             <div class="hero-child page-width
@@ -506,64 +304,13 @@
                             </div>
                         </div>
                     </div>
-                   <!--  <div class="recent-cal-parent">
-                        <div class="recent-cal-child">
-                            <div class="recent-cal-head">
-                                <div class="recent-cal-title">Recent Calculations</div>
-                                <div class="recent-cal-view-all"><a href="#" class="view-all">View All</a></div>
-                            </div>
-                            <div class="recent-cal-body">
-                                <div class="recent-cal-container">
-                                    <div class="recent-cal-head">
-                                        <div class="recent-cal-svg">
-                                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <circle
-                                                    cx="12"
-                                                    cy="12"
-                                                    r="9"
-                                                    stroke="currentColor"
-                                                    stroke-width="1.6"
-                                                />
-                                                <path
-                                                    d="M12 7.5V12.5L15.5 14.5"
-                                                    stroke="currentColor"
-                                                    stroke-width="1.6"
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                />
-                                                </svg>
-                                        </div>
-                                        <div class="recent-cal-head-second">
-                                            <div class="recent-cal-first">
-                                                <span class="recent-cal-month">June</span>
-                                                <span class="recent-cal-date">15,</span>
-                                                <span class="recent-cal-year">2023</span>
-                                            </div>
-                                            <div class="recent-cal-second">
-                                                <span class="recent-cal-year-ago">1 year,</span>
-                                                <span class="recent-cal-month-ago">1 month</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="recent-cal-foot">
-                                       <div class="recent-cal-foot-svg">
-                                        <svg viewBox="0 0 24 24" width="24" height="24" xmlns="http://www.w3.org/2000/svg" 
-                                        fill="none" stroke="#555555" stroke-width="2.5" 
-                                        stroke-linecap="round" stroke-linejoin="round">
-                                        <polyline points="9,5 16,12 9,19"/>
-                                        </svg>
-                                       </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
                 </div>
 
             </div>
         </div>
     </main>
-
+    <script src="assets/darktheme.js"></script>
     <script src="assets/homepage.js"></script>
+    <script src="assets/birthdaymodel.js"></script>
   </body>
 </html>
