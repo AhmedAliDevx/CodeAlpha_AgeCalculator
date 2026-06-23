@@ -1,3 +1,19 @@
+/* All Queries */
+
+let dayInput = document.querySelector(".day-input");
+let monthInput = document.querySelector(".month-input");
+let yearInput = document.querySelector(".year-input");
+let calculateBtn = document.querySelector(".calculator-card-btn");
+
+const TotalWeeks = document.querySelector(".total-weeks");
+const TotalDays = document.querySelector(".total-days");
+const TotalHours = document.querySelector(".total-hours");
+const nextBirthday = document.querySelector(".next-birthday");
+const resultYear = document.getElementById("r-year");
+const resultMonth = document.getElementById("r-month");
+const resultDay = document.getElementById("r-day");
+const daysRemaining = document.getElementById("daysRemaining");
+
 /* Calculator Js */
 const today = new Date();
 const formatted = today.toLocaleDateString("en-US", {
@@ -7,6 +23,7 @@ const formatted = today.toLocaleDateString("en-US", {
 });
 document.querySelector(".reference-date-value").textContent =
   `Today (${formatted})`;
+
 /* Alert */
 const alertCross = document.querySelector(".alert-cross");
 const alertMessage = document.querySelector(".alert-content");
@@ -14,19 +31,7 @@ const alertBox = document.querySelector(".alert-parent");
 alertCross.addEventListener("click", () => {
   alertBox.classList.remove("active");
 });
-/* All Queries */
-let dayInput = document.querySelector(".day-input");
-let monthInput = document.querySelector(".month-input");
-let yearInput = document.querySelector(".year-input");
-let calculateBtn = document.querySelector(".calculator-card-btn");
-const resultYear = document.getElementById("r-year");
-const resultMonth = document.getElementById("r-month");
-const resultDay = document.getElementById("r-day");
-const TotalWeeks = document.querySelector(".total-weeks");
-const TotalDays = document.querySelector(".total-days");
-const TotalHours = document.querySelector(".total-hours");
-const daysRemaining = document.getElementById("daysRemaining");
-const nextBirthday = document.querySelector(".next-birthday");
+
 /* Calculator Button */
 calculateBtn.addEventListener("click", (e) => {
   let day = parseInt(dayInput.value);
@@ -81,7 +86,6 @@ calculateBtn.addEventListener("click", (e) => {
     days += lastMonth.getDate();
     months--;
   }
-  console.log(years, months, days);
 
   resultYear.textContent = years;
   resultMonth.textContent = months;
@@ -126,9 +130,6 @@ calculateBtn.addEventListener("click", (e) => {
     day: "numeric",
     year: "numeric",
   });
-
-  console.log(nextBirthday);
-  console.log(formattedNextBd);
   daysRemaining.textContent = daysLeft;
   nextBirthday.textContent = formattedNextBd;
   document.querySelector(".next-bd-progress").style.width = `${progress}%`;
@@ -147,6 +148,7 @@ commonDates.forEach((btn) => {
     }
   });
 });
+
 /* Document Remove Alert Container */
 document.body.addEventListener("click", (e) => {
   alertBox.classList.remove("active");
