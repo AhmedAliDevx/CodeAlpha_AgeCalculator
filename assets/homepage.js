@@ -28,6 +28,9 @@ document.querySelector(".reference-date-value").textContent =
 const alertCross = document.querySelector(".alert-cross");
 const alertMessage = document.querySelector(".alert-content");
 const alertBox = document.querySelector(".alert-parent");
+alertBox.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
 alertCross.addEventListener("click", () => {
   alertBox.classList.remove("active");
 });
