@@ -153,3 +153,6 @@ commonDates.forEach((btn) => {
 document.body.addEventListener("click", (e) => {
   alertBox.classList.remove("active");
 });
+
+/* Footer Year */
+document.getElementById("footerYear").textContent = new Date().getFullYear();
