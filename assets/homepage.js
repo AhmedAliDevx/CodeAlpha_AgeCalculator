@@ -73,6 +73,7 @@ calculateBtn.addEventListener("click", (e) => {
     alertMessage.textContent = `That date doesn't exist.`;
     return;
   }
+
   let age = today.getFullYear() - birthDate.getFullYear();
   const hasHadBirthday =
     today.getMonth() > birthDate.getMonth() ||
